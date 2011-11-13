@@ -1,0 +1,20 @@
+apply plugin: 'groovy'
+
+defaultTasks 'build'
+
+//def GRADLE_HOME = '/home/toguri/dev/gradle'
+//def GROOVY_HOME = '/usr/local/groovy/groovy-1.8.3'
+
+repositories {
+        //flatDir(dirs: file("${GROOVY_HOME}/lib"))
+        //flatDir(dirs: file("${GRADLE_HOME}/lib"))
+        mavenCentral()
+}
+
+dependencies {
+        //groovy module(':groovy-all:1.8.3')
+        //groovy module(':junit:4.8.1')
+        groovy 'org.codehaus.groovy:groovy:1.8.3'
+        testCompile 'junit:junit:4.8.2'
+}
+
